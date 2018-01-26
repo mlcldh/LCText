@@ -3,7 +3,7 @@
 //  MengTextKit
 //
 //  Created by menglingchao on 2018/1/19.
-//  Copyright © 2018年 Google Inc. All rights reserved.
+//  Copyright © 2018年 mengLingChao. All rights reserved.
 //
 
 #import "UILabel+LCLabelCategory.h"
@@ -21,15 +21,15 @@ NSString const *LC_TextHelper = @"LC_TextHelper";
 
 @implementation UILabel (LCLabelCategory)
 
-- (void)setEl_tapBlock:(void (^)(NSInteger, NSAttributedString *))el_tapBlock {
-    objc_setAssociatedObject(self, &LC_TapBlock, el_tapBlock, OBJC_ASSOCIATION_COPY);
+- (void)setLc_tapBlock:(void (^)(NSInteger, NSAttributedString *))lc_tapBlock {
+    objc_setAssociatedObject(self, &LC_TapBlock, lc_tapBlock, OBJC_ASSOCIATION_COPY);
     self.userInteractionEnabled = YES;
     LCTextHelper *textHelper = [[LCTextHelper alloc]init];
     self.lc_textHelper = textHelper;
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(el_tapAction:)];
     [self addGestureRecognizer:tapGestureRecognizer];
 }
-- (void (^)(NSInteger, NSAttributedString *))el_tapBlock {
+- (void (^)(NSInteger, NSAttributedString *))lc_tapBlock {
     return objc_getAssociatedObject(self, &LC_TapBlock);
 }
 - (void)setLc_textHelper:(LCTextHelper *)lc_textHelper {
@@ -41,11 +41,11 @@ NSString const *LC_TextHelper = @"LC_TextHelper";
 #pragma mark -Event
 - (void)el_tapAction:(UITapGestureRecognizer *)recognizer {
     CGPoint location = [recognizer locationInView:recognizer.view];
-    NSLog(@"location = %@",NSStringFromCGPoint(location));
+//    NSLog(@"location = %@",NSStringFromCGPoint(location));
     __weak UILabel *weakSelf = self;
     [self.lc_textHelper selectLocation:location OfLabel:(UILabel *)recognizer.view selectedBlock:^(NSInteger index, NSAttributedString *charAttributedString) {
-        if (weakSelf.el_tapBlock) {
-            weakSelf.el_tapBlock(index,charAttributedString);
+        if (weakSelf.lc_tapBlock) {
+            weakSelf.lc_tapBlock(index,charAttributedString);
         }
     }];
 }

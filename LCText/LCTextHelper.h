@@ -3,7 +3,7 @@
 //  MengTextKit
 //
 //  Created by menglingchao on 2018/1/19.
-//  Copyright © 2018年 Google Inc. All rights reserved.
+//  Copyright © 2018年 mengLingChao. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

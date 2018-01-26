@@ -58,7 +58,7 @@
         [attributedText appendAttributedString:attachmentAttributedString];
         [attributedText appendAttributedString:[[NSAttributedString alloc]initWithString:@"多试试"]];
         _titleLabel.attributedText = attributedText;
-        [_titleLabel setEl_tapBlock:^(NSInteger index, NSAttributedString *charAttributedString) {
+        [_titleLabel setLc_tapBlock:^(NSInteger index, NSAttributedString *charAttributedString) {
             NSLog(@"%@,%@,%@",@(index),charAttributedString,charAttributedString.string);
         }];
         [self.contentView addSubview:_titleLabel];
