@@ -26,7 +26,7 @@ NSString const *LC_TextHelper = @"LC_TextHelper";
     self.userInteractionEnabled = YES;
     LCTextHelper *textHelper = [[LCTextHelper alloc]init];
     self.lc_textHelper = textHelper;
-    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(el_tapAction:)];
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(lc_tapAction:)];
     [self addGestureRecognizer:tapGestureRecognizer];
 }
 - (void (^)(NSInteger, NSAttributedString *))lc_tapBlock {
@@ -39,7 +39,7 @@ NSString const *LC_TextHelper = @"LC_TextHelper";
     return objc_getAssociatedObject(self, &LC_TextHelper);
 }
 #pragma mark -Event
-- (void)el_tapAction:(UITapGestureRecognizer *)recognizer {
+- (void)lc_tapAction:(UITapGestureRecognizer *)recognizer {
     CGPoint location = [recognizer locationInView:recognizer.view];
 //    NSLog(@"location = %@",NSStringFromCGPoint(location));
     __weak UILabel *weakSelf = self;

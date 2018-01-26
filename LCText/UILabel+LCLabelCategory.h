@@ -12,7 +12,7 @@
 
 /**
  * 点击回调
- * @param el_tapBlock index 没有点到时返回-1;charAttributedString 选中的字符的属性字符串
+ * @param lc_tapBlock index 没有点到时返回-1;charAttributedString 选中的字符的属性字符串
  */
 @property (nonatomic,copy) void (^lc_tapBlock)(NSInteger index,NSAttributedString *charAttributedString);
 
