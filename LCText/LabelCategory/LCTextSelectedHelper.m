@@ -1,14 +1,14 @@
 //
-//  LCTextHelper.m
+//  LCTextSelectedHelper.m
 //  MengTextKit
 //
 //  Created by menglingchao on 2018/1/19.
 //  Copyright © 2018年 mengLingChao. All rights reserved.
 //
 
-#import "LCTextHelper.h"
+#import "LCTextSelectedHelper.h"
 
-@interface LCTextHelper ()
+@interface LCTextSelectedHelper ()
 
 @property (nonatomic,strong)NSTextStorage *textStorage;
 @property (nonatomic,strong)NSLayoutManager *layoutManager;
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation LCTextHelper
+@implementation LCTextSelectedHelper
 
 - (instancetype)init {
     self = [super init];
@@ -29,7 +29,7 @@
     }
     return self;
 }
-- (void)selectLocation:(CGPoint)location OfLabel:(UILabel *)label selectedBlock:(void (^)(NSInteger, NSAttributedString *))selectedBlock {
+- (void)selectLocation:(CGPoint)location ofLabel:(UILabel *)label selectedBlock:(void (^)(NSInteger, NSAttributedString *))selectedBlock {
     self.textContainer.size = label.bounds.size;
     self.textContainer.lineFragmentPadding = 0;
     self.textContainer.maximumNumberOfLines = label.numberOfLines;

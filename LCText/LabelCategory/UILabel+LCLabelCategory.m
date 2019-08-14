@@ -7,15 +7,18 @@
 //
 
 #import "UILabel+LCLabelCategory.h"
-#import "LCTextHelper.h"
+#import "LCTextSelectedHelper.h"
 #import <objc/runtime.h>
+
+#define LCWeak(obj) __weak typeof(obj) weak##obj = obj;
+#define LCStrong(obj) __strong typeof(obj) obj = weak##obj;
 
 NSString const *LC_TapBlock = @"LC_TapBlock";
 NSString const *LC_TextHelper = @"LC_TextHelper";
 
 @interface UILabel ()
 
-@property (nonatomic,strong) LCTextHelper *lc_textHelper;
+@property (nonatomic,strong) LCTextSelectedHelper *lc_textHelper;
 
 @end
 
@@ -24,7 +27,7 @@ NSString const *LC_TextHelper = @"LC_TextHelper";
 - (void)setLc_tapBlock:(void (^)(NSInteger, NSAttributedString *))lc_tapBlock {
     objc_setAssociatedObject(self, &LC_TapBlock, lc_tapBlock, OBJC_ASSOCIATION_COPY);
     self.userInteractionEnabled = YES;
-    LCTextHelper *textHelper = [[LCTextHelper alloc]init];
+    LCTextSelectedHelper *textHelper = [[LCTextSelectedHelper alloc]init];
     self.lc_textHelper = textHelper;
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(lc_tapAction:)];
     [self addGestureRecognizer:tapGestureRecognizer];
@@ -32,20 +35,21 @@ NSString const *LC_TextHelper = @"LC_TextHelper";
 - (void (^)(NSInteger, NSAttributedString *))lc_tapBlock {
     return objc_getAssociatedObject(self, &LC_TapBlock);
 }
-- (void)setLc_textHelper:(LCTextHelper *)lc_textHelper {
+- (void)setLc_textHelper:(LCTextSelectedHelper *)lc_textHelper {
     objc_setAssociatedObject(self, &LC_TextHelper, lc_textHelper, OBJC_ASSOCIATION_RETAIN);
 }
-- (LCTextHelper *)lc_textHelper {
+- (LCTextSelectedHelper *)lc_textHelper {
     return objc_getAssociatedObject(self, &LC_TextHelper);
 }
 #pragma mark -Event
 - (void)lc_tapAction:(UITapGestureRecognizer *)recognizer {
     CGPoint location = [recognizer locationInView:recognizer.view];
 //    NSLog(@"location = %@",NSStringFromCGPoint(location));
-    __weak UILabel *weakSelf = self;
-    [self.lc_textHelper selectLocation:location OfLabel:(UILabel *)recognizer.view selectedBlock:^(NSInteger index, NSAttributedString *charAttributedString) {
-        if (weakSelf.lc_tapBlock) {
-            weakSelf.lc_tapBlock(index,charAttributedString);
+    LCWeak(self);
+    [self.lc_textHelper selectLocation:location ofLabel:(UILabel *)recognizer.view selectedBlock:^(NSInteger index, NSAttributedString *charAttributedString) {
+        LCStrong(self)
+        if (self.lc_tapBlock) {
+            self.lc_tapBlock(index,charAttributedString);
         }
     }];
 }

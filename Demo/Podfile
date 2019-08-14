@@ -5,3 +5,4 @@ inhibit_all_warnings!
 target:'LCTextDemo'
 
 pod 'Masonry', '1.1.0'
+pod 'LCText', :path => '../../LCText'

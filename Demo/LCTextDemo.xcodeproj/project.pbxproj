@@ -16,8 +16,8 @@
 		8D32EF262015814000A207A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D32EF252015814000A207A0 /* main.m */; };
 		8D32EF2E2015842200A207A0 /* LCATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D32EF2D2015842200A207A0 /* LCATableViewCell.m */; };
 		8D32EF312015843600A207A0 /* LCBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D32EF302015843600A207A0 /* LCBTableViewCell.m */; };
-		8D32EF372015857700A207A0 /* LCTextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D32EF342015857700A207A0 /* LCTextHelper.m */; };
-		8D32EF382015857700A207A0 /* UILabel+LCLabelCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D32EF362015857700A207A0 /* UILabel+LCLabelCategory.m */; };
+		B62145E02303A20400CC7EDD /* LCCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B62145DF2303A20400CC7EDD /* LCCTableViewCell.m */; };
+		B62146052304127B00CC7EDD /* LCSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62146042304127B00CC7EDD /* LCSecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,10 +37,10 @@
 		8D32EF2D2015842200A207A0 /* LCATableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCATableViewCell.m; sourceTree = "<group>"; };
 		8D32EF2F2015843600A207A0 /* LCBTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCBTableViewCell.h; sourceTree = "<group>"; };
 		8D32EF302015843600A207A0 /* LCBTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCBTableViewCell.m; sourceTree = "<group>"; };
-		8D32EF332015857700A207A0 /* LCTextHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCTextHelper.h; sourceTree = "<group>"; };
-		8D32EF342015857700A207A0 /* LCTextHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCTextHelper.m; sourceTree = "<group>"; };
-		8D32EF352015857700A207A0 /* UILabel+LCLabelCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+LCLabelCategory.h"; sourceTree = "<group>"; };
-		8D32EF362015857700A207A0 /* UILabel+LCLabelCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LCLabelCategory.m"; sourceTree = "<group>"; };
+		B62145DE2303A20400CC7EDD /* LCCTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCCTableViewCell.h; sourceTree = "<group>"; };
+		B62145DF2303A20400CC7EDD /* LCCTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCCTableViewCell.m; sourceTree = "<group>"; };
+		B62146032304127B00CC7EDD /* LCSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCSecondViewController.h; sourceTree = "<group>"; };
+		B62146042304127B00CC7EDD /* LCSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCSecondViewController.m; sourceTree = "<group>"; };
 		C82322C43130C681FE9F49C3 /* Pods-LCTextDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCTextDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-LCTextDemo/Pods-LCTextDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +68,6 @@
 		8D32EF0A2015814000A207A0 = {
 			isa = PBXGroup;
 			children = (
-				8D32EF322015857700A207A0 /* LCText */,
 				8D32EF152015814000A207A0 /* LCTextDemo */,
 				8D32EF142015814000A207A0 /* Products */,
 				3DBE40641F2506B7F6CA8D38 /* Pods */,
@@ -92,28 +91,20 @@
 				8D32EF192015814000A207A0 /* ViewController.h */,
 				8D32EF1A2015814000A207A0 /* ViewController.m */,
 				8D32EF1C2015814000A207A0 /* Main.storyboard */,
+				B62146032304127B00CC7EDD /* LCSecondViewController.h */,
+				B62146042304127B00CC7EDD /* LCSecondViewController.m */,
 				8D32EF2C2015842200A207A0 /* LCATableViewCell.h */,
 				8D32EF2D2015842200A207A0 /* LCATableViewCell.m */,
 				8D32EF2F2015843600A207A0 /* LCBTableViewCell.h */,
 				8D32EF302015843600A207A0 /* LCBTableViewCell.m */,
+				B62145DE2303A20400CC7EDD /* LCCTableViewCell.h */,
+				B62145DF2303A20400CC7EDD /* LCCTableViewCell.m */,
 				8D32EF1F2015814000A207A0 /* Assets.xcassets */,
 				8D32EF212015814000A207A0 /* LaunchScreen.storyboard */,
 				8D32EF242015814000A207A0 /* Info.plist */,
 				8D32EF252015814000A207A0 /* main.m */,
 			);
 			path = LCTextDemo;
-			sourceTree = "<group>";
-		};
-		8D32EF322015857700A207A0 /* LCText */ = {
-			isa = PBXGroup;
-			children = (
-				8D32EF332015857700A207A0 /* LCTextHelper.h */,
-				8D32EF342015857700A207A0 /* LCTextHelper.m */,
-				8D32EF352015857700A207A0 /* UILabel+LCLabelCategory.h */,
-				8D32EF362015857700A207A0 /* UILabel+LCLabelCategory.m */,
-			);
-			name = LCText;
-			path = ../LCText;
 			sourceTree = "<group>";
 		};
 		DC57D6CB72899C5C5296FF47 /* Frameworks */ = {
@@ -135,8 +126,6 @@
 				8D32EF0F2015814000A207A0 /* Sources */,
 				8D32EF102015814000A207A0 /* Frameworks */,
 				8D32EF112015814000A207A0 /* Resources */,
-				5BD3D53F5C0B13FFD42207BF /* [CP] Embed Pods Frameworks */,
-				8707B231803DB3C6E695EB04 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,49 +183,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5BD3D53F5C0B13FFD42207BF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCTextDemo/Pods-LCTextDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8707B231803DB3C6E695EB04 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCTextDemo/Pods-LCTextDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E82C733049D7D1D1BC3FCDBD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LCTextDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -246,12 +208,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B62145E02303A20400CC7EDD /* LCCTableViewCell.m in Sources */,
 				8D32EF2E2015842200A207A0 /* LCATableViewCell.m in Sources */,
-				8D32EF372015857700A207A0 /* LCTextHelper.m in Sources */,
 				8D32EF1B2015814000A207A0 /* ViewController.m in Sources */,
-				8D32EF382015857700A207A0 /* UILabel+LCLabelCategory.m in Sources */,
 				8D32EF312015843600A207A0 /* LCBTableViewCell.m in Sources */,
 				8D32EF262015814000A207A0 /* main.m in Sources */,
+				B62146052304127B00CC7EDD /* LCSecondViewController.m in Sources */,
 				8D32EF182015814000A207A0 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,7 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D975HMHLA6;
+				DEVELOPMENT_TEAM = AS4ANJJUVM;
 				INFOPLIST_FILE = LCTextDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -404,7 +366,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D975HMHLA6;
+				DEVELOPMENT_TEAM = AS4ANJJUVM;
 				INFOPLIST_FILE = LCTextDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
