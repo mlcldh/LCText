@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "7.0"
 
-  s.source       = { :git => "https://github.com/mlcldh/LCText.git", :tag => "0.0.2" }
+  s.source       = { :git => "https://github.com/mlcldh/LCText.git", :tag => s.version.to_s }
 #  s.source_files = "LCText"
   s.source_files = 'LCText/**/*.{h,m}'
   s.frameworks = 'UIKit', 'Foundation'
