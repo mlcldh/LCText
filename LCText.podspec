@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "LCText"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "。"
 
   s.homepage     = "https://github.com/mlcldh/LCText"
