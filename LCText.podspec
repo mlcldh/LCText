@@ -42,7 +42,7 @@ Pod::Spec.new do |s|
   s.subspec 'LCTextView' do |ss|
     ss.source_files = 'LCText/LCTextView/*.{h,m,mm}'
     ss.public_header_files = 'LCText/LCTextView/*.h'
-    ss.dependency 'LCText/LabelCategory'
+    ss.dependency 'LCText/TextDidChange'
   end
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
