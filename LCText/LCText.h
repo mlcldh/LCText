@@ -7,3 +7,4 @@
 
 #import "UILabel+LCLabelCategory.h"
 #import "UIView+LCText.h"
+#import "LCTextView.h"

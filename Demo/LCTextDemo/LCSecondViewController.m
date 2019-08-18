@@ -41,7 +41,7 @@
 }
 - (NSArray *)classNames {
     if (! _classNames) {
-        _classNames = @[@"LCATableViewCell",@"LCBTableViewCell",@"LCCTableViewCell"];
+        _classNames = @[@"LCATableViewCell",@"LCBTableViewCell",@"LCCTableViewCell",@"LCDTableViewCell"];
     }
     return _classNames;
 }

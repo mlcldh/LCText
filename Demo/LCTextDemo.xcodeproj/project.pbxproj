@@ -16,6 +16,7 @@
 		8D32EF262015814000A207A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D32EF252015814000A207A0 /* main.m */; };
 		8D32EF2E2015842200A207A0 /* LCATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D32EF2D2015842200A207A0 /* LCATableViewCell.m */; };
 		8D32EF312015843600A207A0 /* LCBTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D32EF302015843600A207A0 /* LCBTableViewCell.m */; };
+		B61E6A9423069483000BCDFF /* LCDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B61E6A9323069483000BCDFF /* LCDTableViewCell.m */; };
 		B62145E02303A20400CC7EDD /* LCCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B62145DF2303A20400CC7EDD /* LCCTableViewCell.m */; };
 		B62146052304127B00CC7EDD /* LCSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62146042304127B00CC7EDD /* LCSecondViewController.m */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,8 @@
 		8D32EF2D2015842200A207A0 /* LCATableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCATableViewCell.m; sourceTree = "<group>"; };
 		8D32EF2F2015843600A207A0 /* LCBTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCBTableViewCell.h; sourceTree = "<group>"; };
 		8D32EF302015843600A207A0 /* LCBTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCBTableViewCell.m; sourceTree = "<group>"; };
+		B61E6A9223069483000BCDFF /* LCDTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCDTableViewCell.h; sourceTree = "<group>"; };
+		B61E6A9323069483000BCDFF /* LCDTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCDTableViewCell.m; sourceTree = "<group>"; };
 		B62145DE2303A20400CC7EDD /* LCCTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCCTableViewCell.h; sourceTree = "<group>"; };
 		B62145DF2303A20400CC7EDD /* LCCTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCCTableViewCell.m; sourceTree = "<group>"; };
 		B62146032304127B00CC7EDD /* LCSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCSecondViewController.h; sourceTree = "<group>"; };
@@ -99,6 +102,8 @@
 				8D32EF302015843600A207A0 /* LCBTableViewCell.m */,
 				B62145DE2303A20400CC7EDD /* LCCTableViewCell.h */,
 				B62145DF2303A20400CC7EDD /* LCCTableViewCell.m */,
+				B61E6A9223069483000BCDFF /* LCDTableViewCell.h */,
+				B61E6A9323069483000BCDFF /* LCDTableViewCell.m */,
 				8D32EF1F2015814000A207A0 /* Assets.xcassets */,
 				8D32EF212015814000A207A0 /* LaunchScreen.storyboard */,
 				8D32EF242015814000A207A0 /* Info.plist */,
@@ -126,6 +131,7 @@
 				8D32EF0F2015814000A207A0 /* Sources */,
 				8D32EF102015814000A207A0 /* Frameworks */,
 				8D32EF112015814000A207A0 /* Resources */,
+				54D9A54B942B8BB3AF7597DC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,6 +189,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		54D9A54B942B8BB3AF7597DC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LCTextDemo/Pods-LCTextDemo-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LCTextDemo/Pods-LCTextDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E82C733049D7D1D1BC3FCDBD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -211,6 +235,7 @@
 				B62145E02303A20400CC7EDD /* LCCTableViewCell.m in Sources */,
 				8D32EF2E2015842200A207A0 /* LCATableViewCell.m in Sources */,
 				8D32EF1B2015814000A207A0 /* ViewController.m in Sources */,
+				B61E6A9423069483000BCDFF /* LCDTableViewCell.m in Sources */,
 				8D32EF312015843600A207A0 /* LCBTableViewCell.m in Sources */,
 				8D32EF262015814000A207A0 /* main.m in Sources */,
 				B62146052304127B00CC7EDD /* LCSecondViewController.m in Sources */,
