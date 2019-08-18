@@ -6,7 +6,11 @@
 //
 
 #import "LCTextView.h"
+#if __has_include(<LCText/LCTextDidChangeHelper.h>)
+#import <LCText/LCTextDidChangeHelper.h>
+#else
 #import "LCTextDidChangeHelper.h"
+#endif
 
 #define LCWeak(obj) __weak typeof(obj) weak##obj = obj;
 #define LCStrong(obj) __strong typeof(obj) obj = weak##obj;
